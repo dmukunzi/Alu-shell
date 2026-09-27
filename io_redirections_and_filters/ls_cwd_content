@@ -1,0 +1,7 @@
+total 12
+drwxr-xr-x 2 root root 107 Sep 27 07:02 .
+drwxr-xr-x 6 root root 103 Sep 27 04:44 ..
+-rwxr-xr-x 1 root root  86 Sep 27 06:58 7-file
+-rwxr-xr-x 1 root root  36 Sep 27 07:02 8-cwd_state
+-rw-r--r-- 1 root root  12 Sep 27 06:58 \*\\'"Best School"\'\\*$\?\*\*\*\*\*:)
+-rw-r--r-- 1 root root   0 Sep 27 07:02 ls_cwd_content
