@@ -1,15 +1,16 @@
 #!/usr/bin/env bash
 # Init script that starts, stops and restarts the manage_my_process script
 PID_FILE="/var/run/my_process.pid"
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
 do_start() {
-    "$(dirname "$0")/manage_my_process" > /dev/null 2>&1 &
+    "$SCRIPT_DIR/manage_my_process" > /dev/null 2>&1 &
     echo "$!" > "$PID_FILE"
 }
 
 do_stop() {
     if [ -f "$PID_FILE" ]; then
-        kill "$(cat "$PID_FILE")"
+        kill "$(cat "$PID_FILE")" 2>/dev/null
         rm -f "$PID_FILE"
     fi
 }
