@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Displays the PID and name of processes whose name contains the word bash
+for dir in /proc/[0-9]*; do
+    name=$(cat "$dir/comm" 2>/dev/null)
+    if [[ "$name" == *bash* ]]; then
+        echo "${dir#/proc/} $name"
+    fi
+done
