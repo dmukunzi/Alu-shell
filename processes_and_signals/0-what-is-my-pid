@@ -1,0 +1,4 @@
+#!/bin/env bash
+#This script prints the working directory
+pwd
+
